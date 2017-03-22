@@ -27,39 +27,39 @@ public class Controller
 		if(gameChoice.equalsIgnoreCase("Ro") || gameChoice.equalsIgnoreCase("Sham") || gameChoice.equalsIgnoreCase("Bo")) 
 		{
 			int computer = findWinner.fight();
-			if(gameChoice.equalsIgnoreCase("Ro") && computer == 3)
+			if(gameChoice.equalsIgnoreCase("Ro") && computer == 2)
 			{
 				System.out.println("Congrats you threw Ro(Rock) and the computer threw Bo(Scissors)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Ro") && computer == 2)
+			else if(gameChoice.equalsIgnoreCase("Ro") && computer == 1)
 			{
 				System.out.println("Sorry you threw Ro(Rock) and the computer threw Sham(Paper)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Ro") && computer == 1)
+			else if(gameChoice.equalsIgnoreCase("Ro") && computer == 0)
 			{
 				System.out.println("Tie you threw Ro(Rock) and the computer threw Ro(Rock)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 1)
+			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 0)
 			{
 				System.out.println("Congrats you threw Sham(Paper) and the computer threw Ro(Rock)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 3)
+			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 2)
 			{
 				System.out.println("Sorry you threw Sham(Paper) and the computer threw Bo(Scissors)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 2)
+			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 1)
 			{
 				System.out.println("Tie you threw Sham(Paper) and the computer threw Sham(Paper)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 2)
+			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 1)
 			{
 				System.out.println("Congrats you threw Bo(Scissors) and the computer threw Sham(Paper)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 3)
+			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 2)
 			{
 				System.out.println("Sorry you threw Bo(Scissors) and the computer threw Ro(Rock)");
 			}
-			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 1)
+			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 0)
 			{
 				System.out.println("Tie you threw Bo(Scissors) and the computer threw Bo(Scissors)");
 			}
