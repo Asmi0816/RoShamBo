@@ -6,6 +6,7 @@ public class Controller
 {
 	private GameDecider findWinner;
 	private Scanner gameScanner;
+	private int score;
 	
 	
 	
@@ -13,15 +14,23 @@ public class Controller
 	{
 		findWinner = new GameDecider();
 		gameScanner = new Scanner(System.in);
+		score = 0;
+		message();
 		startUp();
 	}
 	
-	private void startUp()
+	private void message()
+	
 	{
+		
 		System.out.println("Hello and welcome to the Ro Sham Bo arena!");
 		System.out.println("Are you a noob, scrub, or Semi-Decent? Please choose one.");
 		String userInput = gameScanner.nextLine();
 		System.out.println("Great, you're better than most!");
+	}
+	private void startUp()
+	{
+		
 		System.out.println("Okay just type Ro(Rock) Sham(Paper) Bo(Scissors)");
 		String gameChoice = gameScanner.nextLine();
 		if(gameChoice.equalsIgnoreCase("Ro") || gameChoice.equalsIgnoreCase("Sham") || gameChoice.equalsIgnoreCase("Bo")) 
@@ -30,6 +39,7 @@ public class Controller
 			if(gameChoice.equalsIgnoreCase("Ro") && computer == 2)
 			{
 				System.out.println("Congrats you threw Ro(Rock) and the computer threw Bo(Scissors)");
+				score += 1;
 			}
 			else if(gameChoice.equalsIgnoreCase("Ro") && computer == 1)
 			{
@@ -42,6 +52,7 @@ public class Controller
 			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 0)
 			{
 				System.out.println("Congrats you threw Sham(Paper) and the computer threw Ro(Rock)");
+				score += 1;
 			}
 			else if(gameChoice.equalsIgnoreCase("Sham") && computer == 2)
 			{
@@ -54,6 +65,7 @@ public class Controller
 			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 1)
 			{
 				System.out.println("Congrats you threw Bo(Scissors) and the computer threw Sham(Paper)");
+				score += 1;
 			}
 			else if(gameChoice.equalsIgnoreCase("Bo") && computer == 2)
 			{
@@ -63,6 +75,8 @@ public class Controller
 			{
 				System.out.println("Tie you threw Bo(Scissors) and the computer threw Bo(Scissors)");
 			}
+			System.out.println("\n");
+			startUp();
 		}
 		
 		else
